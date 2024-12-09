@@ -1,0 +1,254 @@
+@import './reset';
+@import './primary';
+@import './nav';
+@import './footer';
+
+/*--------------------------- 1 Main Body Start ---------------------------- */
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+	background-color: #f6fcf4;
+  font-family: arial;
+	background-image: url('../img/bg.svg');
+	background-position: center;
+	background-attachment: fixed;
+	background-size: contain;
+}
+
+/*--------------------------- 2 Main Style ---------------------------- */
+
+h1 {
+	color: #000;
+	text-align: center;
+	font-size: 48px;
+  line-height: 1.125;
+	margin-bottom: 25px;
+  font-weight: 600;
+	@media (max-width: 720px) {
+		font-size: 38px;
+		margin-bottom: 15px;
+	}
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+p {
+	font-size: 16px;
+  line-height: 1.875;
+  font-weight: 300;
+	color: #3b3c3b;
+	margin-bottom: 35px;
+	text-align: center;
+	@media (max-width: 720px) {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+}
+
+button,
+a {
+  cursor: pointer;
+  outline: none;
+}
+
+textarea,
+input,
+button {
+  outline: none;
+
+  -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill {
+  border: 0px solid transparent;
+  -webkit-text-fill-color: $colorDark;
+  -webkit-box-shadow: 0 0 0px 1000px $colorLight inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input {
+  &::-ms-reveal {
+     display: none;
+  }
+  &::-ms-clear {
+      display: none;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.wrap {
+  width: 502px;
+  margin: 0 auto;
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+}
+
+/*--------------------------- 5 Pages Style ---------------------------- */
+
+nav {
+	padding-top: 50px;
+	@media (max-width: 720px) {
+		padding-top: 40px;
+	}
+	a.btn_logo {
+		width: 156px;
+		height: 156px;
+		border: 4px solid #000;
+		display: block;
+		border-radius: 100px;
+		margin: 0 auto;
+		background-color: #fff;
+		@media (max-width: 720px) {
+			width: 100px;
+			height: 100px;
+			border-width: 3px;
+		}
+	}
+}
+
+section {
+	padding: 35px 0 50px 0;
+	@media (max-width: 720px) {
+		padding: 20px 0 40px 0;
+	}
+	p {
+		padding: 0 30px;
+		@media (max-width: 720px) {
+			padding: 0;
+		}
+	}
+}
+
+ul.social_list {
+	display: flex;
+	margin-bottom: 40px;
+	justify-content: space-around;
+	@media (max-width: 720px) {
+		margin-bottom: 20px;
+	}
+	li {
+		a {
+			width: 72px;
+			height: 72px;
+			box-shadow: rgb(0, 0, 0) 0rem 0rem 0rem 0.125rem;
+			border-radius: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: all 100ms linear;
+			@media (max-width: 720px) {
+				width: 52px;
+				height: 52px;
+			}
+			&:hover {
+				background-color: #fff !important;
+			}
+			img {
+				max-width: 50%;
+			}
+		}
+		&:first-child {
+			a {
+				background-color: rgb(252, 146, 233);
+			}
+		}
+		&:nth-child(2) {
+			a {
+				background-color: rgb(253, 211, 5);
+			}
+		}
+		&:nth-child(3) {
+			a {
+				background-color: rgb(199, 193, 248);
+			}
+		}
+		&:nth-child(4) {
+			a {
+				background-color: rgb(41, 214, 198);
+				img {
+					max-width: 60%;
+				}
+			}
+		}
+		&:nth-child(5) {
+			a {
+				background-color: rgb(145, 209, 255);
+			}
+		}
+	}
+}
+
+ul.button_list {
+	li {
+		margin-bottom: 25px;
+		a {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0 50px;
+			color: #000;
+			box-shadow: rgb(0, 0, 0) 0rem 0rem 0rem 0.125rem;
+			border-radius: 50px;
+			height: 68px;
+			width: calc(100% - 100px);
+			transition: all 100ms linear;
+			font-size: 1.125em;
+    	font-weight: 600;
+			background-color: #fff;
+			@media (max-width: 720px) {
+				height: 48px;
+				font-size: 16px;
+				padding: 0 30px;
+				width: calc(100% - 60px);
+			}
+			&:hover {
+				background-color: rgb(253, 211, 5);
+			}
+			span {
+				width: 22px;
+				height: 22px;
+				display: block;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url('../img/icon/angle-right-solid.svg');
+			}
+		}
+	}
+}
+
+.wrap_center {
+	@media (min-height: 1200px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100vh;
+		height: 100svh;
+	}
+}
